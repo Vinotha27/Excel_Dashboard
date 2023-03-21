@@ -8,7 +8,7 @@ st.set_page_config(page_title="Sales Dashboard", page_icon=":bar_chart:", layout
 # ---- READ EXCEL ----
 @st.cache
 def get_data_from_excel():
-    df = pd.read_excel("C:\Users\Guest-User\Downloads\supermarkt_sales.xlsx")
+    df = pd.read_excel("C:/Users/Guest-User/Downloads/supermarkt_sales.xlsx")
     # Add 'hour' column to dataframe
     df["hour"] = pd.to_datetime(df["Time"], format="%H:%M:%S").dt.hour
     return df
